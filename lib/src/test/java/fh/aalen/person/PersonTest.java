@@ -1,0 +1,11 @@
+package fh.aalen.person;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class PersonTest {
+
+	
+
+}
