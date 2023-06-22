@@ -13,16 +13,16 @@ import org.openqa.selenium.interactions.Actions;
 
 public class SeleniumTests {
 	
-	private WebDriver driver;
+	private static WebDriver driver;
 	
 	@BeforeAll
-    public void setUp() {
+    public static void setUp() {
         // Set the path to the geckodriver executable
         System.setProperty("webdriver.gecko.driver", "/opt/homebrew/bin/geckodriver");
 
         // Set Firefox options
         FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true); // Run the browser in headless mode (without GUI)
+        options.setHeadless(false); // Run the browser in headless mode (without GUI)
 
         // Create a new FirefoxDriver instance
         driver = new FirefoxDriver(options);
@@ -161,7 +161,7 @@ public class SeleniumTests {
     
     
     @AfterAll
-    public void tearDown() {
+    public static void tearDown() {
         // Close the browser
         driver.quit();
     }
