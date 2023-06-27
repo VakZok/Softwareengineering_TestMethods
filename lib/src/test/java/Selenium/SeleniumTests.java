@@ -32,7 +32,6 @@ public class SeleniumTests {
 		driver.get("localhost:8081/index.html");
 		sleep(1000);
 	}
-
 	
 	@Test
 	public void testingRequiredInputFields() {
@@ -69,8 +68,7 @@ public class SeleniumTests {
 		sleep(5000);
 		clearVideoInputTextfields();
 	}
-	
-/*	
+		
 	@Test
 	public void create20Videos() {
 		sleep(5000);
@@ -140,7 +138,7 @@ public class SeleniumTests {
 		
 		// Movie 12 - The Farewell
 		setMovieInput(driver, "The Farewell",
-				"A Chinese family keeps their matriarch's terminal illness a secret during a family gathering.", "PG",
+				"A Chinese family keeps their matriarch's terminal illness a secret during a family gathering.", "16",
 				"Comedy, Drama");
 		clearVideoInputTextfields();
 		
@@ -250,7 +248,7 @@ public class SeleniumTests {
 		setMovieInput(driver, "The Invisible Man",
 				"A woman believes she is being stalked by her abusive and invisible ex-boyfriend.", "15",
 				"Horror, Mystery");
-		clearVideoInputTextfields();
+		clearVideoInputTextfields();*/
 		
 		sleep(5000);
 	}
@@ -296,12 +294,12 @@ public class SeleniumTests {
 		buttonElement.click();
 		sleep(4000);
 
-		// Change amount of entries from 10 to 50
+		// Change amount of entries from 10 to 25
 		buttonElement = driver.findElement(By.xpath("/html/body/div/section[2]/div/div[1]/label/select"));
 		buttonElement.click();
 		sleep(2000);
 
-		buttonElement = driver.findElement(By.xpath("/html/body/div/section[2]/div/div[1]/label/select/option[3]"));
+		buttonElement = driver.findElement(By.xpath("/html/body/div/section[2]/div/div[1]/label/select/option[2]"));
 		buttonElement.click();
 		sleep(1000);
 
@@ -364,7 +362,6 @@ public class SeleniumTests {
 
 		sleep(5000);
 	}
-*/
 	
 	@AfterAll
 	public static void tearDown() {
